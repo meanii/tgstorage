@@ -26,7 +26,7 @@ func Server() {
 	router.Init(app)
 
 	port := fmt.Sprintf(":%s", configs.EnvConfig.Port)
-	log.Infof("Server is running on http://0.0.0.0:%s", port)
+	log.Infof("Server is running on http://0.0.0.0%s", port)
 	err := app.Listen(port)
 	if err != nil {
 		log.Fatalf("Error while listening to port %s: %s", port, err.Error())
